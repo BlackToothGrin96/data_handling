@@ -60,16 +60,3 @@ class RequestsApi(object):
 
 
 def main():
-
-    new_df = RequestsApi(alpha_vantage_url, "TIME_SERIES_INTRADAY", my_symbol_2, "1min", "compact", "csv", my_api_key)
-
-    df_data0 = RequestsApi.intraday(new_df)
-    df_data1 = RequestsApi.try_print(df_data0)
-    df_data2 = RequestsApi.add_symbol(df_data1)
-    RequestsApi.pickle_save(df_data2)
-    df_data3 = RequestsApi.pickle_load()
-    RequestsApi.try_print(df_data3)
-
-
-if __name__ == "__main__":
-    main()
